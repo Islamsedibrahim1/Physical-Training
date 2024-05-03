@@ -1,0 +1,13 @@
+import requests
+
+# Variables
+BASE_URL = "https://api.twelvelabs.io/v1.2"
+api_key = "tlk_1GQF6D73EDEKND2M25JSR30SNBEW"
+data = {
+    "video_id": "66342515d1cd5a287c957b3d",
+    "type": "chapter",
+    "prompt": "describe the speed and angles of the player"
+}
+
+# Send request
+response = requests.post(f"{BASE_URL}/summarize", json=data, headers={"x-api-key": api_key})
